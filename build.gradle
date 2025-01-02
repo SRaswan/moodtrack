@@ -1,7 +1,24 @@
 plugins {
   id 'application'
   id 'org.openjfx.javafxplugin' version '0.1.0'
+  id 'com.gluonhq.gluonfx-gradle-plugin' version '1.0.24'
+
 }
+
+// gluonfx {
+//     target = "ios"
+//     attachConfiguration {
+//         version = "4.0.8"
+//         configuration = "ios"
+//     }
+// }
+
+// pluginManagement {
+//     repositories {
+//         gradlePluginPortal()
+//     }
+// }
+// rootProject.name = "App"
 
 repositories {
     mavenCentral()

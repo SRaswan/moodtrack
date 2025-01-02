@@ -8,7 +8,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) {
-        Label l = new Label("Hello, JavaFX, running on Java");
+        Label l = new Label("Hello, JavaFX, ihsdbfjhsdbfjhsbjfhbds on Java");
         Scene scene = new Scene(new StackPane(l), 590, 1278);
         stage.setScene(scene);
         stage.setTitle("Mood Tracking App");

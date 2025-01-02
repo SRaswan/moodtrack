@@ -168,10 +168,7 @@ public class Model {
     }
 
     public String generateImage(String prompt) throws IOException, InterruptedException {
-        String API_ENDPOINT = "https://api.openai.com/v1/images/generations";
-        String API_KEY = "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";
-        String MODEL = "dall-e-2";
-        int n = 1;
+
 
         // Create a request body which you will pass into request object
         JSONObject requestBody = new JSONObject();

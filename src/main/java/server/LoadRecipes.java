@@ -56,7 +56,6 @@ public class LoadRecipes implements HttpHandler{
     // }
 
     public static List<Document> loadRecipes(String userID) {
-        String uri = "mongodb+srv://sraswan:pandapanda777@cluster0.fefhkg8.mongodb.net/?retryWrites=true&w=majority";
         MongoClient mongoClient = MongoClients.create(uri);
         MongoDatabase PantryPalDB = mongoClient.getDatabase("PantryPal");
         MongoCollection<Document> recipesCollection = PantryPalDB.getCollection("recipes");

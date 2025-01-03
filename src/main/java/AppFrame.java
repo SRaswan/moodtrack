@@ -24,7 +24,7 @@ class Footer extends HBox {
         // set a default style for buttons - background color, font size, italics
         String defaultButtonStyle = ("-fx-background-color: #bdd9bd;  -fx-font-weight: bold; -fx-font-size: 13; -fx-font-family: 'Lucida Bright';");
 
-        createButton = new Button("+ New Recipe"); // text displayed on add button
+        createButton = new Button("View Calendar"); // text displayed on add button
         createButton.setStyle(defaultButtonStyle); // styling the button
 
         this.getChildren().addAll(createButton);
@@ -52,18 +52,18 @@ class Header extends HBox {
 
         // set a default style for buttons - background color, font size, italics
         String defaultButtonStyle = ("-fx-background-color: #bdd9bd;  -fx-font-weight: bold; -fx-font-size: 13; -fx-font-family: 'Lucida Bright';");
-        createAccountButton = new Button("Create Account"); // text displayed on account button
+        createAccountButton = new Button("Daily Check-in"); // text displayed on account button
         createAccountButton.setStyle(defaultButtonStyle);
         // createAccountButton.setAlignment(Pos.CENTER_RIGHT);
 
-        loginButton = new Button("Login");
+        loginButton = new Button("Track Period");
         loginButton.setStyle(defaultButtonStyle);
 
-        logoutButton = new Button("Logout");
+        logoutButton = new Button("Monthly Overview");
         logoutButton.setStyle(defaultButtonStyle);
-        logoutButton.setVisible(false);
+        logoutButton.setVisible(true);
 
-        Text titleText = new Text("PantryPal"); // Text of the Header
+        Text titleText = new Text("MoodFlow"); // Text of the Header
         titleText.setStyle("-fx-font-weight: bold;  -fx-font-size: 25; -fx-font-family: 'Lucida Bright';");
 
         username = new Label();
@@ -135,7 +135,7 @@ public class AppFrame extends BorderPane {
         createButton = footer.getCreateButton();
         createAccountButton = header.getCreateAccountButton(true);
         loginButton = header.getLoginButton();
-        logoutButton = header.getLogoutButton(false);
+        logoutButton = header.getLogoutButton(true);
 
         // recipeList.loadTasks();
 
@@ -153,10 +153,10 @@ public class AppFrame extends BorderPane {
     }
 
     public void setLoggedOutUI() {
-        header.getLogoutButton(false);
-        header.getLoginButton(true);
-        header.getCreateAccountButton(true);
-        header.getUsername().setVisible(false);
+        header.getLogoutButton(true);
+        header.getLoginButton(false);
+        header.getCreateAccountButton(false);
+        header.getUsername().setVisible(true);
     }
 
 
